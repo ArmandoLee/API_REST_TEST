@@ -1,0 +1,148 @@
+TODOS LOS JSON SON EJECUTADOS EN POSTMAN
+SE HICIERON LOS CASO DE USO REPRESENTADOS EN EL EJERCICIO DE CREACION DE API REST
+https://localhost:7273/api/Clientes
+
+--AGREGAR NUEVO CLIENTE Jose Lema
+{
+  "contraseña": "1234",
+  "Estado": "Activo",
+  "Persona": {
+    "Nombre": "Jose Lema",
+    "Genero": "Masculino",
+    "Edad": 30,
+    "Identificacion": "1234567890",
+    "Direccion": "Otavalo sn y Principal",
+    "Telefono": "098254785"
+  }
+}
+
+--AGREGAR NUEVO CLIENTE Marianela Montalvo
+{
+  "contraseña": "5678",
+  "Estado": "Activo",
+  "Persona": {
+    "Nombre": "Marianela Montalvo",
+    "Genero": "Femenino",
+    "Edad": 25,
+    "Identificacion": "25456",
+    "Direccion": "Amazonas y NNUU",
+    "Telefono": "097548965"
+  }
+}
+
+--AGREGAR NUEVO CLIENTE Juan Osorio
+{
+  "contraseña": "1245",
+  "Estado": "Activo",
+  "Persona": {
+    "Nombre": "Juan Osorio",
+    "Genero": "Masculino",
+    "Edad": 35,
+    "Identificacion": "2365548",
+    "Direccion": "13 Junio y Equinoccial",
+    "Telefono": "098874587"
+  }
+}
+
+
+https://localhost:7273/api/Cuentas?nombreCliente=Jose Lema
+
+--CREAR CUENTA Jose Lema Ahorro
+{
+  "NumeroCuenta": "478758",
+  "TipoCuenta": "Ahorro",
+  "Saldo": 2000.00,
+  "Estado": "Activa"
+}
+
+
+https://localhost:7273/api/Cuentas?nombreCliente=Marianela Montalvo
+
+--CREAR CUENTA Marianela Montalvo Corriente
+{
+  "NumeroCuenta": "225487",
+  "TipoCuenta": "Corriente",
+  "Saldo": 100.00,
+  "Estado": "Activa"
+}
+
+
+https://localhost:7273/api/Cuentas?nombreCliente=Juan Osorio
+
+--CREAR CUENTA Juan Osorio Ahorro
+{
+  "NumeroCuenta": "495878",
+  "TipoCuenta": "Ahorro",
+  "Saldo": 0,
+  "Estado": "Activa"
+}
+
+
+https://localhost:7273/api/Cuentas?nombreCliente=Marianela Montalvo
+
+--CREAR CUENTA Marianela Montalvo Ahorro
+{
+  "NumeroCuenta": "496825",
+  "TipoCuenta": "Ahorro",
+  "Saldo": 540,
+  "Estado": "Activa"
+}
+
+
+https://localhost:7273/api/Cuentas?nombreCliente=Jose Lema
+
+--CREAR CUENTA Jose Lema Corriente
+{
+  "NumeroCuenta": "585545",
+  "TipoCuenta": "Corriente",
+  "Saldo": 1000,
+  "Estado": "Activa"
+}
+
+
+--CREAR MOVIMIENTO DE Debito de la cuenta 478758
+
+https://localhost:7273/api/Movimientos?numeroCuenta=478758
+
+{
+    "Fecha": "2023-08-05T12:30:00",
+    "TipoMovimiento": "R",
+    "Valor": 575
+}
+
+--CREAR MOVIMIENTO DE Credito de la cuenta 225487
+
+https://localhost:7273/api/Movimientos?numeroCuenta=225487
+
+{
+    "Fecha": "2023-08-05T12:30:00",
+    "TipoMovimiento": "S",
+    "Valor": 600
+}
+
+
+--CREAR MOVIMIENTO DE Credito de la cuenta 495878
+
+https://localhost:7273/api/Movimientos?numeroCuenta=495878
+
+{
+    "Fecha": "2023-08-05T12:30:00",
+    "TipoMovimiento": "S",
+    "Valor": 150
+}
+
+
+
+--CREAR MOVIMIENTO DE Debito de la cuenta 496825
+
+https://localhost:7273/api/Movimientos?numeroCuenta=496825
+
+{
+    "Fecha": "2023-08-05T12:30:00",
+    "TipoMovimiento": "R",
+    "Valor": 540
+}
+
+--OBTENER REPORTES Cliente Marianela Montalvo fecha 10/02/2022
+
+https://localhost:7273/api/Reportes?fechaInicio=2022-02-10&fechaFin=2023-12-31&nombreUsuario=Marianela%20Montalvo
